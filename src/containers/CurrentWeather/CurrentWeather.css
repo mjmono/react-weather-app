@@ -1,0 +1,121 @@
+.current-section__content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  justify-content: space-between;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  gap: 16px;
+}
+
+.current-section__main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-section__icon {
+  font-size: clamp(5rem, calc(8vw + 1rem), 7.5rem);
+}
+
+.current-section__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current-section__temperature {
+  font-size: clamp(1.4rem, calc(3vw + 0.1rem), 2rem);
+  font-weight: 400;
+}
+
+.current-section__condition {
+  font-size: clamp(1rem, calc(1.7vw + 0.1rem), 1.15rem);
+  padding-top: 0.2rem;
+}
+
+.weather-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: clamp(1rem, calc(1.7% + 0.1rem), 13rem);
+  height: 40%;
+  position: relative;
+}
+
+.weather-info__item {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  text-align: center;
+  position: relative; /* Needed for pseudo-elements */
+}
+
+/* Right separator (except last column in each row) */
+.weather-info__item:not(:nth-child(2n))::after {
+  content: "";
+  position: absolute;
+  top: 17%; /* Adjust this to control where the line starts */
+  bottom: 17%; /* Adjust this to control where the line ends */
+  right: 0;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.305);
+}
+
+/* Bottom separator (only first row) */
+.weather-info__item:nth-child(-n + 2)::before {
+  content: "";
+  position: absolute;
+  left: 10%; /* Adjust this to control where the line starts */
+  right: 10%; /* Adjust this to control where the line ends */
+  bottom: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.305);
+}
+
+.weather-info__item h3 {
+  font-size: clamp(0.9rem, calc(0.9vw + 0.4rem), 1.1rem);
+}
+
+.weather-info__item p {
+  font-size: clamp(0.8rem, calc(0.9vw + 0.25rem), 1rem);
+}
+
+/* Large (laptops) */
+@media (max-width: 1200px) {
+}
+
+/* Medium (tablets) */
+@media (max-width: 992px) {
+}
+
+/* Small (phones & small tablets) */
+@media (max-width: 768px) {
+  .current-section__content {
+    padding: 0px;
+    gap: 0px;
+  }
+  .current-section__main {
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .current-section__details {
+    align-items: flex-end;
+  }
+}
+
+/* Extra small (phones) */
+@media (max-width: 480px) {
+  .weather-info__item,
+  .current-section__main {
+    padding: 10px;
+  }
+}

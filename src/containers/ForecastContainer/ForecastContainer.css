@@ -1,0 +1,61 @@
+/* src/containers/ForecastContainer.css */
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.forecast-container__title {
+  font-size: clamp(1rem, calc(1.5vw + 0.1rem), 1.2rem);
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid black;
+}
+
+.forecast-container__list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  gap: 0px; /* Space between cards */
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+  scroll-behavior: smooth;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+.forecast-container__list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.forecast-container__list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.forecast-container__list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.forecast-container__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Large (laptops) */
+@media (max-width: 1200px) {
+}
+
+/* Medium (tablets) */
+@media (max-width: 992px) {
+}
+/* Small (phones & small tablets) */
+@media (max-width: 768px) {
+}
+
+/* Extra small (phones) */
+@media (max-width: 480px) {
+  .forecast-container {
+    padding: 10px;
+  }
+}

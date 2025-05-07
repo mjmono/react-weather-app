@@ -1,0 +1,77 @@
+/* src/components/ForecastCard.css */
+.forecast-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0px;
+  text-align: center;
+  justify-content: space-between;
+  flex: 0 0 14.3%;
+  position: relative;
+}
+
+.forecast-card::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  right: 0;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.305);
+}
+
+.forecast-card:last-child::after {
+  background-color: transparent;
+}
+
+.forecast-card__label {
+  font-size: clamp(0.87rem, calc(1.3vw + 0.1rem), 1rem);
+  margin-bottom: 8px;
+}
+
+.forecast-card__sublabel {
+  font-size: clamp(0.77rem, calc(1.2vw + 0.1rem), 0.9rem);
+}
+
+.forecast-card__temperature {
+  font-size: clamp(0.87rem, calc(1.3vw + 0.1rem), 1rem);
+  margin: 4px 0;
+}
+
+.forecast-card__icon {
+  font-size: clamp(2.5rem, calc(4.5vw + 0.1rem), 3.3rem);
+  display: block;
+  margin: 8px auto;
+}
+
+/* Large (laptops) */
+@media (max-width: 1200px) {
+}
+
+/* Medium (tablets) */
+@media (max-width: 992px) {
+}
+
+/* Small (phones & small tablets) */
+@media (max-width: 768px) {
+  .forecast-card {
+    flex: 0 0 12.5%;
+  }
+}
+
+@media (max-width: 580px) {
+  .forecast-card {
+    flex: 0 0 calc(100% / 6);
+  }
+}
+
+/* Extra small (phones) */
+@media (max-width: 480px) {
+  .forecast-card {
+    flex: 0 0 20%;
+    padding: 10px 0px;
+  }
+
+  .forecast-card__icon {
+    margin: 4px auto;
+  }
+}

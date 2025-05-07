@@ -1,0 +1,113 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.border-red {
+  border: 1px solid rgb(240, 85, 85);
+}
+
+.border-green {
+  border: 1px solid rgb(85, 240, 160);
+}
+
+.border-blue {
+  border: 1px solid rgb(85, 193, 240);
+}
+
+.border-purple {
+  border: 1px solid rgb(196, 85, 240);
+}
+
+.border-pink {
+  border: 1px solid rgb(240, 85, 181);
+}
+
+.border-yellow {
+  border: 1px solid rgb(194, 152, 39);
+}
+
+.bg-gray {
+  background-color: rgb(83, 83, 83);
+}
+
+.effect-glass {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.34);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Extra small (phones) */
+@media (max-width: 480px) {
+}
+
+/* Small (phones & small tablets) */
+@media (max-width: 768px) {
+  .app {
+    align-items: flex-start;
+  }
+}
+
+/* Medium (tablets) */
+@media (max-width: 992px) {
+}
+
+/* Large (laptops) */
+@media (max-width: 1200px) {
+}

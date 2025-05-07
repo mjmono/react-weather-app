@@ -1,0 +1,24 @@
+.search-bar {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  width: 60%;
+  padding: 0.3rem 0.6rem;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  gap: 0.5rem;
+}
+
+.search-bar__icon {
+  font-size: clamp(1.1rem, calc(2vw + 0.1rem), 1.5rem);
+  cursor: pointer;
+}
+
+.search-bar__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: clamp(0.8rem, calc(1.3vw + 0.1rem), 1rem);
+  background: none;
+  color: var(--text-color);
+}
